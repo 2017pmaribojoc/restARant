@@ -3,12 +3,14 @@
 //  restARant
 //
 //  Created by Patrick Maribojoc on 4/15/18.
-//  Copyright © 2018 PatrickMaribojoc. All rights reserved.
+//  Assisted by Thomas Le on 05/03/18.
+//  Copyright © 2018 PatrickMaribojoc && ThomasTri && AMwaisela. All rights reserved.
 //
 
 import UIKit
 import SceneKit
 import ARKit
+import SideMenu
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
