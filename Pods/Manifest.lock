@@ -1,0 +1,16 @@
+PODS:
+  - YALSideMenu (2.0.1)
+
+DEPENDENCIES:
+  - YALSideMenu (~> 2.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - YALSideMenu
+
+SPEC CHECKSUMS:
+  YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
+
+PODFILE CHECKSUM: b5d0c6b3e6bebca4629efcc005a500f0a5dbf258
+
+COCOAPODS: 1.5.0
