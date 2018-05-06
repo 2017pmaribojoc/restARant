@@ -41,6 +41,14 @@
                                     <segue destination="aI7-Gr-Kxc" kind="show" id="Xi1-Y2-PcT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWz-yZ-sac">
+                                <rect key="frame" x="171" y="436" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <segue destination="BYT-9C-hh8" kind="showDetail" id="Z1e-Lg-0ah"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JAd-IU-yqW"/>
@@ -65,6 +73,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpr-WJ-7Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="830" y="235"/>
+        </scene>
+        <!--Restaurant1Menu-->
+        <scene sceneID="iDm-xM-hn7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Restaurant1Menu" id="BYT-9C-hh8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fm5-lb-s7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="340"/>
         </scene>
     </scenes>
 </document>
