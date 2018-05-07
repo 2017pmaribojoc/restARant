@@ -125,6 +125,31 @@ class Restaurant1Controller: UIViewController, ARSCNViewDelegate {
         
     }
     
+    @IBAction func addFries(_ sender: UIButton) {
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        guard let breadScene = SCNScene(named: "art.scnassets/dutch-boy-idaho-fries-with-chili-cheese/source/chili-cheese-fries.dae") else { return }
+        let breadNode = SCNNode()
+        let breadSceneChildNodes = breadScene.rootNode.childNodes
+        
+        for childNode in breadSceneChildNodes {
+            breadNode.addChildNode(childNode)
+        }
+        
+        let x = CGFloat(globalAnchor.center.x)
+        let y = CGFloat(globalAnchor.center.y)
+        let z = CGFloat(globalAnchor.center.z)
+        breadNode.position = SCNVector3(x,y,z)
+        breadNode.scale = SCNVector3(0.25, 0.25, 0.25)
+        node.addChildNode(breadNode)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //
