@@ -77,8 +77,16 @@
                                     <action selector="addSalmon:" destination="X8e-OK-REU" eventType="touchUpInside" id="UjU-lN-XXc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFR-Uk-u2D">
+                                <rect key="frame" x="79" y="612" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fruit Cake"/>
+                                <connections>
+                                    <action selector="addFruitCake:" destination="X8e-OK-REU" eventType="touchUpInside" id="YWp-4b-P5x"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-II-qCO">
-                                <rect key="frame" x="38" y="612" width="39" height="30"/>
+                                <rect key="frame" x="25" y="612" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bagel"/>
                                 <connections>
