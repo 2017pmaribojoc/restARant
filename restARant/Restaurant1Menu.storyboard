@@ -57,6 +57,9 @@
                                 <rect key="frame" x="247" y="599" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Fries"/>
+                                <connections>
+                                    <action selector="addFries:" destination="X8e-OK-REU" eventType="touchUpInside" id="6d2-tL-R1B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2X-9s-yqy">
                                 <rect key="frame" x="94" y="599" width="41" height="30"/>
@@ -64,6 +67,14 @@
                                 <state key="normal" title="Bread"/>
                                 <connections>
                                     <action selector="addBread:" destination="X8e-OK-REU" eventType="touchUpInside" id="bN4-pa-4ff"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-0e-f7m">
+                                <rect key="frame" x="287" y="599" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Salmon"/>
+                                <connections>
+                                    <action selector="addSalmon:" destination="X8e-OK-REU" eventType="touchUpInside" id="UjU-lN-XXc"/>
                                 </connections>
                             </button>
                         </subviews>
