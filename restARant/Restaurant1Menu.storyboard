@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myD-7t-VPq">
-                                <rect key="frame" x="35" y="599" width="44" height="30"/>
+                                <rect key="frame" x="35" y="574" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Muffin"/>
                                 <connections>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-HO-yRN">
-                                <rect key="frame" x="158" y="599" width="65" height="30"/>
+                                <rect key="frame" x="158" y="574" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bibimbap"/>
                                 <connections>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9S-Nl-7vR">
-                                <rect key="frame" x="247" y="599" width="34" height="30"/>
+                                <rect key="frame" x="247" y="574" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Fries"/>
                                 <connections>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2X-9s-yqy">
-                                <rect key="frame" x="94" y="599" width="41" height="30"/>
+                                <rect key="frame" x="94" y="574" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bread"/>
                                 <connections>
@@ -70,11 +70,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-0e-f7m">
-                                <rect key="frame" x="287" y="599" width="51" height="30"/>
+                                <rect key="frame" x="287" y="574" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salmon"/>
                                 <connections>
                                     <action selector="addSalmon:" destination="X8e-OK-REU" eventType="touchUpInside" id="UjU-lN-XXc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-II-qCO">
+                                <rect key="frame" x="38" y="612" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bagel"/>
+                                <connections>
+                                    <action selector="addBagel:" destination="X8e-OK-REU" eventType="touchUpInside" id="lFV-Xa-GIF"/>
                                 </connections>
                             </button>
                         </subviews>
