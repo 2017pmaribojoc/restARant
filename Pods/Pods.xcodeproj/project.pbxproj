@@ -10,10 +10,10 @@
 		2856E0B1CF6375DD7686F50BA9406F10 /* YALSideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9B8603C323565B8A10B902ADC25369 /* YALSideMenu-dummy.m */; };
 		4D793EEAD45157EAEEE9EE45E027B3E3 /* MenuItemsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49455E7E3A34CD61EBA223EB55D94089 /* MenuItemsAnimator.swift */; };
 		75389FDC20315680857B38D17D80DA66 /* Pods-restARant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72350E1C47D8665932263EB6D2CD1AC1 /* Pods-restARant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A9CC8F08DA32BAC52B1BDB1CF06FCA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A44303696A1ADE73BE887D083E9EBA23 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B05FA8F74248495D5A2E2E465F5158 /* Menu.swift */; };
-		E0219B6D5557D5B9B5FC8729BD2F2ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D218ED1108DAF3AA8914E782C6478C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		E3BC3BB9003A98C0F08EF78A1765CA87 /* Pods-restARant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D771BE51F9F803022DD91F9931133 /* Pods-restARant-dummy.m */; };
-		F12168F723471FDB3B808803BD8B50D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F5B96DC8DB3F198D26C025E9EDA152F6 /* MenuTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36E3C8C7A1C378A295078175CB5982 /* MenuTransitionAnimator.swift */; };
 		F8E919E21FD9238B5D9F54D2B83AC351 /* YALSideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 793FF5B90751486C12A57AF47FECDC24 /* YALSideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -35,8 +35,8 @@
 		49455E7E3A34CD61EBA223EB55D94089 /* MenuItemsAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuItemsAnimator.swift; path = SideMenu/MenuItemsAnimator.swift; sourceTree = "<group>"; };
 		51B05FA8F74248495D5A2E2E465F5158 /* Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = SideMenu/Menu.swift; sourceTree = "<group>"; };
 		5771378ED455E0359DEB6E98C31EBCB3 /* Pods-restARant-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-restARant-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5EB07464C3213E8B36B3D6BD0A1C017A /* Pods-restARant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-restARant.modulemap"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		72350E1C47D8665932263EB6D2CD1AC1 /* Pods-restARant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-restARant-umbrella.h"; sourceTree = "<group>"; };
 		793FF5B90751486C12A57AF47FECDC24 /* YALSideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YALSideMenu-umbrella.h"; sourceTree = "<group>"; };
 		7D2D771BE51F9F803022DD91F9931133 /* Pods-restARant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-restARant-dummy.m"; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12168F723471FDB3B808803BD8B50D7 /* Foundation.framework in Frameworks */,
+				9A9CC8F08DA32BAC52B1BDB1CF06FCA7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0219B6D5557D5B9B5FC8729BD2F2ED0 /* Foundation.framework in Frameworks */,
+				D218ED1108DAF3AA8914E782C6478C5F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +105,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -131,17 +139,9 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		E875F7B56328D7111E57FCC1FF2D8056 /* Pods */ = {
