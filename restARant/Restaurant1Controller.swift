@@ -23,11 +23,9 @@ class Restaurant1Controller: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        // 1
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
 
         globalAnchor = planeAnchor
-        // 6
         globalNode = node
         DispatchQueue.main.async {
             self.scanTableLabel.isHidden = true
@@ -48,6 +46,78 @@ class Restaurant1Controller: UIViewController, ARSCNViewDelegate {
     func configureLighting() {
         restaurantSceneView.autoenablesDefaultLighting = true
         restaurantSceneView.automaticallyUpdatesLighting = true
+    }
+    
+    func addAsset(assetname: String, scale: Double, node: SCNNode){
+        guard let newScene = SCNScene(named: assetname) else { return }
+        let newNode = SCNNode()
+        let newSceneChildNodes = newScene.rootNode.childNodes
+        
+        for childNode in newSceneChildNodes {
+            newNode.addChildNode(childNode)
+        }
+        
+        let x = CGFloat(globalAnchor.center.x)
+        let y = CGFloat(globalAnchor.center.y)
+        let z = CGFloat(globalAnchor.center.z)
+        newNode.position = SCNVector3(x,y,z)
+        newNode.scale = SCNVector3(scale,scale,scale)
+        node.addChildNode(newNode)
+    }
+    
+    @IBAction func addRicotta(_ sender: UIButton){
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        addAsset(assetname: "art.scnassets/ricotta_tartine/ricotta_tartini2.dae", scale: 0.25, node: node)
+    }
+    
+    @IBAction func addKebab(_ sender: UIButton){
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        addAsset(assetname: "art.scnassets/kebab/source/kebab2.dae", scale: 0.25, node: node)
+    }
+    
+    @IBAction func addGyoza(_ sender: UIButton){
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
+    }
+    
+    @IBAction func addWagamama(_ sender: UIButton){
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.1, node: node)
+    }
+    
+    @IBAction func addEmpanada(_ sender: UIButton){
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        
+        addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
     }
     
     @IBAction func addBread(_ sender: UIButton) {
@@ -170,7 +240,7 @@ class Restaurant1Controller: UIViewController, ARSCNViewDelegate {
         let y = CGFloat(globalAnchor.center.y)
         let z = CGFloat(globalAnchor.center.z)
         breadNode.position = SCNVector3(x,y,z)
-        breadNode.scale = SCNVector3(0.25, 0.25, 0.25)
+        breadNode.scale = SCNVector3(0.1, 0.1, 0.1)
         node.addChildNode(breadNode)
         
     }
