@@ -16,7 +16,8 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ContentViewController viewDidLoad");
+        print(type.rawValue);
         imageView.image = UIImage(named: type.rawValue)
     }
     

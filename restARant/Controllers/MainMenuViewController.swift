@@ -23,6 +23,7 @@ class MainMenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch (segue.identifier, segue.destination) {
         case (.some("presentMenu"), let menu as SideMenuViewController):
+            print("case: presentMenu");
             menu.selectedItem = selectedIndex
             menu.delegate = self
             menu.transitioningDelegate = self
@@ -42,8 +43,10 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
         contentType = !contentType
         transitionPoint = point
         selectedIndex = index
-        
+        print("INSIDE MENU FUNCTION");
+        print(index);
         let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
+        print(contentType.rawValue);
         content.type = contentType
         navigator.setViewControllers([content], animated: true)
         
