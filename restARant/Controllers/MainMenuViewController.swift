@@ -123,7 +123,28 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
             childNode.removeFromParentNode()
         }
         print("adding asset...");
-        addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
+        if (index == 1){
+            addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
+        } else if (index == 2){
+            addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
+        } else if (index == 3){
+            addAsset(assetname: "art.scnassets/ricotta_tartine/ricotta_tartini2.dae", scale: 0.25, node: node)
+        } else if (index == 4){
+            addAsset(assetname: "art.scnassets/kebab/source/kebab2.dae", scale: 0.25, node: node)
+        } else if (index == 5){
+            addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.25, node: node)
+        } else if (index == 6){
+            addAsset(assetname: "art.scnassets/spicy-korean-fried-chicken/source/korean-fried-chicken.dae", scale: 0.25, node: node)
+        } else if (index == 7){
+            addAsset(assetname: "art.scnassets/dutch-boy-idaho-fries-with-chili-cheese/source/chili-cheese-fries.dae", scale: 0.25, node: node)
+        } else if (index == 8){
+            addAsset(assetname: "art.scnassets/salmon/salmon.dae", scale: 0.1, node: node)
+        } else if (index == 9){
+            addAsset(assetname: "art.scnassets/sesame-bagel/sesame-bagel.dae", scale: 0.1, node: node)
+        } else if (index == 10){
+            addAsset(assetname: "art.scnassets/fruit-cake/fruit-cake.dae", scale: 0.1, node: node)
+        }
+        
 //        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
 //        print(contentType.rawValue);
 //        content.type = contentType
