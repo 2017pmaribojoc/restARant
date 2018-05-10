@@ -8,8 +8,16 @@
 
 import UIKit
 import SideMenu
+import SceneKit
+import ARKit
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
+    
+    var globalAnchor: ARPlaneAnchor!
+    var globalNode: SCNNode!
+    
+    @IBOutlet weak var scanTableLabel: UILabel!
+    @IBOutlet var restaurantSceneView: ARSCNView!
     
     fileprivate var selectedIndex = 0
     fileprivate var transitionPoint: CGPoint!
@@ -18,6 +26,9 @@ class MainMenuViewController: UIViewController {
     
     lazy fileprivate var menuAnimator : MenuTransitionAnimator! = MenuTransitionAnimator(mode: .presentation, shouldPassEventsOutsideMenu: false) { [unowned self] in
         self.dismiss(animated: true, completion: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,21 +46,93 @@ class MainMenuViewController: UIViewController {
             super.prepare(for: segue, sender: sender)
         }
     }
+    
+    func addAsset(assetname: String, scale: Double, node: SCNNode){
+        print("addAsset");
+        guard let newScene = SCNScene(named: assetname) else { return }
+        let newNode = SCNNode()
+        let newSceneChildNodes = newScene.rootNode.childNodes
+        
+        for childNode in newSceneChildNodes {
+            newNode.addChildNode(childNode)
+        }
+        
+        let x = CGFloat(globalAnchor.center.x)
+        let y = CGFloat(globalAnchor.center.y)
+        let z = CGFloat(globalAnchor.center.z)
+        newNode.position = SCNVector3(x,y,z)
+        newNode.scale = SCNVector3(scale,scale,scale)
+        node.addChildNode(newNode)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        print("Rendering");
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        
+        globalAnchor = planeAnchor
+        globalNode = node
+        DispatchQueue.main.async {
+            self.scanTableLabel.isHidden = true
+//            self.restaurantSceneView.isHidden = true
+        }
+        
+    }
+    
+    func setUpSceneView() {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        
+        restaurantSceneView.session.run(configuration)
+        
+        restaurantSceneView.delegate = self
+        restaurantSceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+         print("2");
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //
+        //        // Create a session configuration
+        //        let configuration = ARWorldTrackingConfiguration()
+        //
+        //        // Run the view's session
+        //        restaurantSceneView.session.run(configuration)
+        print("1");
+        setUpSceneView()
+    }
 }
 
 extension MainMenuViewController: SideMenuViewControllerDelegate {
     
     func menu(_: SideMenuViewController, didSelectItemAt index: Int, at point: CGPoint) {
-        contentType = !contentType
-        transitionPoint = point
-        selectedIndex = index
+        
+        
+        // Get ContentViewController if one exists
+        // Load appropriate asset
+
+        
+//        contentType = !contentType
+//        transitionPoint = point
+//        selectedIndex = index
         print("INSIDE MENU FUNCTION");
         print(index);
-        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
-        print(contentType.rawValue);
-        content.type = contentType
-        navigator.setViewControllers([content], animated: true)
-        
+        guard let node = globalNode else{
+            return
+        }
+        for childNode in node.childNodes {
+            childNode.removeFromParentNode()
+        }
+        print("adding asset...");
+        addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
+//        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
+//        print(contentType.rawValue);
+//        content.type = contentType
+//        content.globalAnchor = globalAnchor
+//        content.globalNode = globalNode
+//
+//
+//        navigator.setViewControllers([content], animated: true)
+//        restaurantSceneView.isHidden = true
         DispatchQueue.main.async {
             self.dismiss(animated: true, completion: nil)
         }

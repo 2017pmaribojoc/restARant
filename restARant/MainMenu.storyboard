@@ -36,9 +36,24 @@
                                     <segue destination="ZxZ-hn-OS8" kind="show" identifier="presentMenu" id="BSI-8b-Od2"/>
                                 </connections>
                             </button>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-UL-W1e">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Scan Table!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-oy-z74">
+                                <rect key="frame" x="115" y="361" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="restaurantSceneView" destination="bt2-UL-W1e" id="0AK-V6-RwF"/>
+                        <outlet property="scanTableLabel" destination="0bI-oy-z74" id="xl6-Fd-m8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d5-OD-lE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,16 +86,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="content_music" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-ZY-IMm">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-xd-1cd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="84a-oj-8Yc"/>
                     <connections>
-                        <outlet property="imageView" destination="AfC-ZY-IMm" id="n4l-zc-mq6"/>
+                        <outlet property="restaurantSceneView" destination="fCh-xd-1cd" id="WNd-14-NHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6S-l4-Dh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,7 +339,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="content_music" width="320" height="568"/>
         <image name="icon-1" width="24" height="24"/>
         <image name="icon-2" width="39" height="39"/>
         <image name="icon-3" width="41" height="30"/>
