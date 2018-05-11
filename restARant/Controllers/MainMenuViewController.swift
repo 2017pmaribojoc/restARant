@@ -21,8 +21,6 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
     
     fileprivate var selectedIndex = 0
     fileprivate var transitionPoint: CGPoint!
-    fileprivate var contentType: ContentType = .Music
-    fileprivate var navigator: UINavigationController!
     
     lazy fileprivate var menuAnimator : MenuTransitionAnimator! = MenuTransitionAnimator(mode: .presentation, shouldPassEventsOutsideMenu: false) { [unowned self] in
         self.dismiss(animated: true, completion: nil)
@@ -39,9 +37,7 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
             menu.delegate = self
             menu.transitioningDelegate = self
             menu.modalPresentationStyle = .custom
-        case (.some("embedNavigator"), let navigator as UINavigationController):
-            self.navigator = navigator
-            self.navigator.delegate = self
+       
         default:
             super.prepare(for: segue, sender: sender)
         }
@@ -78,7 +74,6 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
         globalNode = node
         DispatchQueue.main.async {
             self.scanTableLabel.isHidden = true
-//            self.restaurantSceneView.isHidden = true
         }
         
     }
@@ -91,18 +86,11 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
         
         restaurantSceneView.delegate = self
         restaurantSceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-         print("2");
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //
-        //        // Create a session configuration
-        //        let configuration = ARWorldTrackingConfiguration()
-        //
-        //        // Run the view's session
-        //        restaurantSceneView.session.run(configuration)
-        print("1");
+
         setUpSceneView()
     }
 }
@@ -112,15 +100,9 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
     func menu(_: SideMenuViewController, didSelectItemAt index: Int, at point: CGPoint) {
         
         
-        // Get ContentViewController if one exists
-        // Load appropriate asset
 
-        
-//        contentType = !contentType
-//        transitionPoint = point
-//        selectedIndex = index
         print("INSIDE MENU FUNCTION");
-        print(index);
+        print("INDEX: ", index);
         guard let node = globalNode else{
             return
         }
@@ -150,15 +132,6 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
             addAsset(assetname: "art.scnassets/fruit-cake/fruit-cake.dae", scale: 0.1, node: node)
         }
         
-//        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
-//        print(contentType.rawValue);
-//        content.type = contentType
-//        content.globalAnchor = globalAnchor
-//        content.globalNode = globalNode
-//
-//
-//        navigator.setViewControllers([content], animated: true)
-//        restaurantSceneView.isHidden = true
         DispatchQueue.main.async {
             self.dismiss(animated: true, completion: nil)
         }

@@ -12,7 +12,6 @@
         <!--Main Menu View Controller-->
         <scene sceneID="AW1-Ww-LFT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6d5-OD-lE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uVB-uE-vAE" customClass="MainMenuViewController" customModule="restARant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CPI-6N-9wk"/>
@@ -53,13 +52,13 @@
                         <outlet property="scanTableLabel" destination="0bI-oy-z74" id="xl6-Fd-m8c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d5-OD-lE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-991.20000000000005" y="-143.47826086956522"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="X0g-vU-d2F">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d1O-ao-yKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ZxZ-hn-OS8" customClass="SideMenuViewController" customModule="restARant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="vSC-ra-HB1">
                         <rect key="frame" x="0.0" y="0.0" width="60" height="600"/>
@@ -94,7 +93,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-2" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-Wa-teu">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mesh.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-Wa-teu">
                                                     <rect key="frame" x="11" y="15" width="39" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -288,18 +287,19 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="60" height="600"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1O-ao-yKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-623.20000000000005" y="541.07946026986508"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon-1" width="24" height="24"/>
-        <image name="icon-2" width="39" height="39"/>
         <image name="icon-3" width="41" height="30"/>
         <image name="icon-4" width="28" height="47"/>
         <image name="icon-5" width="36" height="32"/>
         <image name="icon-6" width="31" height="31"/>
         <image name="icon-7" width="37" height="38"/>
         <image name="icon-9" width="38" height="34"/>
+        <image name="mesh.jpeg" width="2048" height="2048"/>
     </resources>
 </document>

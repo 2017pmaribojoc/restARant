@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,19 +22,16 @@
                                 <rect key="frame" x="1355" y="312" width="68" height="30"/>
                                 <state key="normal" title="restARant"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="restARaunt.png" translatesAutoresizingMaskIntoConstraints="NO" id="rcg-Ub-8gK">
-                                <rect key="frame" x="-45" y="0.0" width="464" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restARaunt" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-3T-rrZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rcg-Ub-8gK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-45" id="2dg-XL-jAL"/>
                             <constraint firstItem="kxy-9m-Nee" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="A06-4x-zJj"/>
                             <constraint firstItem="kxy-9m-Nee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="292" id="Uof-g3-stq"/>
-                            <constraint firstItem="rcg-Ub-8gK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Usw-Bq-Hok"/>
-                            <constraint firstItem="kxy-9m-Nee" firstAttribute="leading" secondItem="rcg-Ub-8gK" secondAttribute="trailing" constant="936" id="WI7-vl-pB8"/>
                             <constraint firstAttribute="trailing" secondItem="kxy-9m-Nee" secondAttribute="trailing" constant="-1048" id="ZJy-gx-CBg"/>
-                            <constraint firstItem="rcg-Ub-8gK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="rGu-m8-Sck"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="restARaunt.png" width="2778" height="3744"/>
+        <image name="restARaunt" width="2778" height="3744"/>
     </resources>
 </document>
