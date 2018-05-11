@@ -62,6 +62,11 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
         let z = CGFloat(globalAnchor.center.z)
         newNode.position = SCNVector3(x,y,z)
         newNode.scale = SCNVector3(scale,scale,scale)
+        
+        let action = SCNAction.rotateBy(x: 0, y: CGFloat(2 * Double.pi), z: 0, duration: 10)
+        let repAction = SCNAction.repeatForever(action)
+        
+        newNode.runAction(repAction, forKey: "myRotate")
         node.addChildNode(newNode)
     }
     
