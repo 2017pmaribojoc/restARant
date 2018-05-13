@@ -113,7 +113,8 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
         if (index == 1){
             addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
         } else if (index == 2){
-            addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
+//            addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
+            addAsset(assetname: "art.scnassets/yogurt/yogurt2.dae", scale: 0.25, node: node)
         } else if (index == 3){
             addAsset(assetname: "art.scnassets/ricotta_tartine/ricotta_tartini2.dae", scale: 0.25, node: node)
         } else if (index == 4){
