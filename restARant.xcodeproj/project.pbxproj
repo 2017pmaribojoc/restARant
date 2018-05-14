@@ -10,7 +10,6 @@
 		001CB9320547199A18CDC82D /* Pods_restARant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8274E0A3ABF1E797C872C2 /* Pods_restARant.framework */; };
 		012E3BA12083D52E00FE6FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E3BA02083D52E00FE6FEF /* AppDelegate.swift */; };
 		012E3BA32083D52E00FE6FEF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 012E3BA22083D52E00FE6FEF /* art.scnassets */; };
-		012E3BAA2083D52E00FE6FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012E3BA92083D52E00FE6FEF /* Assets.xcassets */; };
 		012E3BAD2083D52E00FE6FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012E3BAB2083D52E00FE6FEF /* LaunchScreen.storyboard */; };
 		0155237B20A3930300E68582 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0155237A20A3930300E68582 /* MainMenu.storyboard */; };
 		0155237D20A3933A00E68582 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155237C20A3933A00E68582 /* MainMenuViewController.swift */; };
@@ -25,7 +24,6 @@
 		012E3B9D2083D52E00FE6FEF /* restARant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restARant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012E3BA02083D52E00FE6FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012E3BA22083D52E00FE6FEF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		012E3BA92083D52E00FE6FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012E3BAC2083D52E00FE6FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012E3BAE2083D52E00FE6FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0155237A20A3930300E68582 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				0155239520A39AA700E68582 /* Controllers */,
 				012E3BA02083D52E00FE6FEF /* AppDelegate.swift */,
 				012E3BA22083D52E00FE6FEF /* art.scnassets */,
-				012E3BA92083D52E00FE6FEF /* Assets.xcassets */,
 				012E3BAB2083D52E00FE6FEF /* LaunchScreen.storyboard */,
 				012E3BAE2083D52E00FE6FEF /* Info.plist */,
 				0155237A20A3930300E68582 /* MainMenu.storyboard */,
@@ -194,7 +191,6 @@
 				012E3BA32083D52E00FE6FEF /* art.scnassets in Resources */,
 				012E3BAD2083D52E00FE6FEF /* LaunchScreen.storyboard in Resources */,
 				0155237B20A3930300E68582 /* MainMenu.storyboard in Resources */,
-				012E3BAA2083D52E00FE6FEF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
