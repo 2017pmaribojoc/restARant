@@ -18,6 +18,7 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
     
     @IBOutlet weak var scanTableLabel: UILabel!
     @IBOutlet var restaurantSceneView: ARSCNView!
+    @IBOutlet weak var foodDescription: UILabel!
     
     fileprivate var selectedIndex = 0
     fileprivate var transitionPoint: CGPoint!
@@ -112,31 +113,64 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
         print("adding asset...");
         if (index == 0){
              addAsset(assetname: "art.scnassets/spicy-korean-fried-chicken/source/korean-fried-chicken.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Fried Chicken"
+            }
         }
         else if (index == 1){
              addAsset(assetname: "art.scnassets/salmon/salmon.dae", scale: 0.1, node: node)
            // addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Cedar-planked Salmon"
+            }
         } else if (index == 2){
                addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.25, node: node)
 //            addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
             //addAsset(assetname: "art.scnassets/yogurt/yogurt2.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Chicken fried rice"
+            }
         } else if (index == 3){
             addAsset(assetname: "art.scnassets/ricotta_tartine/ricotta_tartini2.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Ricotta tartini"
+            }
         } else if (index == 4){
              addAsset(assetname: "art.scnassets/fruit-cake/fruit-cake.dae", scale: 0.1, node: node)
             //addAsset(assetname: "art.scnassets/kebab/source/kebab2.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Strawberry fruitcake"
+            }
         } else if (index == 5){
             addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Chicken fried rice"
+            }
         } else if (index == 6){
             addAsset(assetname: "art.scnassets/spicy-korean-fried-chicken/source/korean-fried-chicken.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Fried Chicken"
+            }
         } else if (index == 7){
             addAsset(assetname: "art.scnassets/dutch-boy-idaho-fries-with-chili-cheese/source/chili-cheese-fries.dae", scale: 0.25, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Chili cheese fries"
+            }
         } else if (index == 8){
             addAsset(assetname: "art.scnassets/salmon/salmon.dae", scale: 0.1, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Cedar-planked Salmon"
+            }
         } else if (index == 9){
             addAsset(assetname: "art.scnassets/sesame-bagel/sesame-bagel.dae", scale: 0.1, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Sesame everything bagel"
+            }
         } else if (index == 10){
             addAsset(assetname: "art.scnassets/fruit-cake/fruit-cake.dae", scale: 0.1, node: node)
+            DispatchQueue.main.async {
+                self.foodDescription.text = "Strawberry fruitcake"
+            }
         }
         
         DispatchQueue.main.async {
