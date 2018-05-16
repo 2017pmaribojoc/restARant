@@ -24,8 +24,8 @@ class SideMenuViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("SideMenuViewController viewWillAppear");
-        let indexPath = IndexPath(row: selectedItem, section: 0)
-        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        //let indexPath = IndexPath(row: selectedItem, section: 0)
+        //tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
     }
 }
 

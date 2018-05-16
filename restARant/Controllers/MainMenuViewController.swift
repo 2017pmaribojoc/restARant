@@ -85,7 +85,7 @@ class MainMenuViewController: UIViewController, ARSCNViewDelegate  {
         restaurantSceneView.session.run(configuration)
         
         restaurantSceneView.delegate = self
-        restaurantSceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+     //   restaurantSceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,15 +110,21 @@ extension MainMenuViewController: SideMenuViewControllerDelegate {
             childNode.removeFromParentNode()
         }
         print("adding asset...");
-        if (index == 1){
-            addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
+        if (index == 0){
+             addAsset(assetname: "art.scnassets/spicy-korean-fried-chicken/source/korean-fried-chicken.dae", scale: 0.25, node: node)
+        }
+        else if (index == 1){
+             addAsset(assetname: "art.scnassets/salmon/salmon.dae", scale: 0.1, node: node)
+           // addAsset(assetname: "art.scnassets/salmon_empanadas/empanada.dae", scale: 0.25, node: node)
         } else if (index == 2){
+               addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.25, node: node)
 //            addAsset(assetname: "art.scnassets/gyoza/gyoza.dae", scale: 0.25, node: node)
-            addAsset(assetname: "art.scnassets/yogurt/yogurt2.dae", scale: 0.25, node: node)
+            //addAsset(assetname: "art.scnassets/yogurt/yogurt2.dae", scale: 0.25, node: node)
         } else if (index == 3){
             addAsset(assetname: "art.scnassets/ricotta_tartine/ricotta_tartini2.dae", scale: 0.25, node: node)
         } else if (index == 4){
-            addAsset(assetname: "art.scnassets/kebab/source/kebab2.dae", scale: 0.25, node: node)
+             addAsset(assetname: "art.scnassets/fruit-cake/fruit-cake.dae", scale: 0.1, node: node)
+            //addAsset(assetname: "art.scnassets/kebab/source/kebab2.dae", scale: 0.25, node: node)
         } else if (index == 5){
             addAsset(assetname: "art.scnassets/wagamama/wagamama.dae", scale: 0.25, node: node)
         } else if (index == 6){
